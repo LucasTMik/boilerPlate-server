@@ -1,0 +1,14 @@
+type User {
+    id: ID!,
+    name: String,
+    cpf: String, 
+    password: String
+}
+
+type Query {
+    me: User
+    userById(id: ID!): User
+    userByCpf(cpf: String!): User 
+    usersByName(name: String!): [User]!
+    allUsers: [User]!
+}
